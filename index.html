@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Passagens FLN → BRC</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f0f0f0; }
+    h1 { color: #333; }
+    .voo { background: #fff; padding: 10px; margin-bottom: 10px; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Passagens Aéreas FLN → BRC (26/12 - 05/01)</h1>
+  <div id="passagens">Carregando passagens...</div>
+
+  <script>
+    fetch('./dados/passagens.json')
+      .then(res => res.json())
+      .then(voos => {
+        const container = document.getElementById('passagens');
+        container.innerHTML = "";
+        voos.forEach(voo => {
+          const div = document.createElement('div');
+          div.className = 'voo';
+          div.innerHTML = `
+            <strong>Companhia:</strong> ${voo.companhia}<br>
+            <strong>Preço:</strong> R$${voo.preco}<br>
+            <strong>Saída:</strong> ${voo.ida}<br>
+            <strong>Retorno:</strong> ${voo.volta}<br>
+            <a href="${voo.link}" target="_blank">Ver no site</a>
+          `;
+          container.appendChild(div);
+        });
+      });
+  </script>
+</body>
+</html>
