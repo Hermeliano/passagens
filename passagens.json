@@ -1,0 +1,23 @@
+[
+  {
+    "companhia": "Aerolineas Argentinas",
+    "preco": 2350,
+    "ida": "2025-12-26 08:40",
+    "volta": "2026-01-05 15:10",
+    "link": "https://www.kiwi.com"
+  },
+  {
+    "companhia": "LATAM",
+    "preco": 2480,
+    "ida": "2025-12-26 10:30",
+    "volta": "2026-01-05 13:20",
+    "link": "https://www.kiwi.com"
+  },
+  {
+    "companhia": "GOL + Aerolineas",
+    "preco": 2650,
+    "ida": "2025-12-26 12:00",
+    "volta": "2026-01-05 11:45",
+    "link": "https://www.kiwi.com"
+  }
+]
